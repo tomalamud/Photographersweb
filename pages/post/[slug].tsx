@@ -54,7 +54,7 @@ function Post({ post }: Props) {
         <div className="flex items-center space-x-2">
           <img className="w-10 h-10 rounded-full" src={urlFor(post.author.image).url()!} alt="" />
           <p className="font-extralight text-sm">
-            Blog post by <span className="text-yellow-600">{post.author.name}</span>. - Publiched at {new Date(post._createdAt).toLocaleString()}
+            Escrito por <span className="text-yellow-600">{post.author.name}</span>. - Publicado el {new Date(post._createdAt).toLocaleString()}
           </p>
         </div>
 
@@ -84,8 +84,8 @@ function Post({ post }: Props) {
       {submitted 
       ? (
         <div className="flex flex-col p-10 my-10 bg-yellow-500 text-white max-w-2xl mx-auto">
-          <h3 className="text-3xl font-bold">Thank you for submitting a comment!</h3>
-          <p className="pt-5">Once it has been approved, it will appear bellow.</p>
+          <h3 className="text-3xl font-bold">Gracias por dejar tu comentario!</h3>
+          <p className="pt-5">Cuando sea aprovado, se mostrará aquí abajo.</p>
         </div>
       )
       : (
@@ -105,19 +105,19 @@ function Post({ post }: Props) {
             <input {...register("email", {required: true})} className="shadow border rounded py-2 px-3 form-input mt-1 block w-full outline-none focus:ring ring-yellow-500" placeholder="nakamoto@btc.com" type= "Email"></input>
           </label>
           <label className="block mb-5 ">
-            <span className="text-gray-600">Comment</span>
+            <span className="text-gray-600">Comentario</span>
             <textarea {...register("comment", {required: true})} className="shadow border rounded py-2 px-3 form-textarea mt-1 block w-full outline-none focus:ring ring-yellow-500" placeholder="Comentario..." rows={8}></textarea>
           </label>
 
           <div className="flex flex-col p-5">
           {errors.name && (
-            <span className="text-red-500">The Name field is required</span>
+            <span className="text-red-500">Falta tu nombre</span>
           )}
           {errors.comment && (
-            <span className="text-red-500">The Comment field is required</span>
+            <span className="text-red-500">Falta tu comentario</span>
           )}
           {errors.email && (
-            <span className="text-red-500">The Email field is required</span>
+            <span className="text-red-500">Falta tu email</span>
           )}
         </div>
 
@@ -126,7 +126,7 @@ function Post({ post }: Props) {
       )}
 
       {post.comments.length > 0 && <div className="flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-yellow-500 shadow space-y-2">
-        <h3 className="text-4xl">Comments</h3>
+        <h3 className="text-4xl">Comentarios</h3>
         <hr className="pb-2"/>
         
         {post.comments.map((comment) => (

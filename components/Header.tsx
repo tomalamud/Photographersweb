@@ -15,7 +15,7 @@ function Header() {
       </div>
 
       <div className="flex items-center space-x-5 text-blue-300">
-        <h3 className="border px-4 py-1 border-blue-300 rounded-full"><a href="https://t.me/cordobabitcoin">telegram</a></h3>
+        <h3 className="border px-4 py-1 border-blue-300 rounded-full"><a href="https://t.me/cordobabitcoin">Telegram</a></h3>
       </div>
     </header>
   )
