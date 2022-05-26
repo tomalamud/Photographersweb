@@ -45,8 +45,9 @@ function Post({ post }: Props) {
     <main>
       <Header/>
 
-      <img className="w-full h-40 object-cover" src={urlFor(post.mainImage).url()!} alt="" />
-      
+      <div className="flex justify-between p-5 max-w-7xl mx-auto">
+        <img className="w-full h-full object-cover" src={urlFor(post.mainImage).url()!} alt="" />
+      </div>
       <article className="max-w-3xl mx-auto p-5">
         <h1 className="text-3xl mt-10 mb-3">{post.title}</h1>
         <h2 className="text-xl font-light text-gray-500 mb-2">{post.description}</h2>

@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "sanitystudiotutorial"
+    "name": "JuanCruzPapp"
   },
   "api": {
-    "projectId": "i8vhgs1y",
+    "projectId": "32vel7j0",
     "dataset": "production"
   },
   "plugins": [
